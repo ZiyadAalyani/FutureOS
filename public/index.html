@@ -1,0 +1,127 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FutureOS — Build What Comes Next</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/css/style.css"></head><body><canvas id="space"></canvas><div class="cursor-glow"></div><div class="noise"></div>
+
+<!-- Viral Autonomous Multi-Cursor Creation Swarm Overlay (No dock bar) -->
+<div id="cursorEffectOverlay" class="cursor-effect-overlay">
+  <!-- Hairline Alignment Guides for User Operator -->
+  <div id="userGuideX" class="cursor-guide-x"></div>
+  <div id="userGuideY" class="cursor-guide-y"></div>
+  <div id="userCursorBox" class="swarm-box theme-user">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">OPERATOR · <span id="userCoord">0, 0</span></span>
+  </div>
+
+  <!-- Agent 1: Coral (#ff3366) - Lead Architect -->
+  <div id="agentBox1" class="swarm-box theme-coral">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">ARCHITECT · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor1" class="swarm-cursor theme-coral">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#ff3366" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Architect</span>
+      <span class="agent-action">Synthesizing...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+
+  <!-- Agent 2: Electric Cyan (#00f0ff) - Layout Engine -->
+  <div id="agentBox2" class="swarm-box theme-cyan">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">LAYOUT · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor2" class="swarm-cursor theme-cyan">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#00f0ff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Layout</span>
+      <span class="agent-action">Calibrating...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+
+  <!-- Agent 3: Vivid Amber (#ffb703) - Text Synthesizer -->
+  <div id="agentBox3" class="swarm-box theme-amber">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">SYNTH · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor3" class="swarm-cursor theme-amber">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#ffb703" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Synthesizer</span>
+      <span class="agent-action">Writing...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+
+  <!-- Agent 4: Violet (#a855f7) - Metric Compiler -->
+  <div id="agentBox4" class="swarm-box theme-violet">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">METRIC · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor4" class="swarm-cursor theme-violet">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#a855f7" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Metric</span>
+      <span class="agent-action">Compiling...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+
+  <!-- Agent 5: Emerald (#00ffaa) - Logic & Actions -->
+  <div id="agentBox5" class="swarm-box theme-emerald">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">LOGIC · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor5" class="swarm-cursor theme-emerald">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#00ffaa" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Logic</span>
+      <span class="agent-action">Binding...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+
+  <!-- Agent 6: Crisp White (#ffffff) - Spacing & Polish -->
+  <div id="agentBox6" class="swarm-box theme-white">
+    <span class="corner tl">+</span><span class="corner tr">+</span><span class="corner bl">+</span><span class="corner br">+</span>
+    <span class="cursor-badge">INSPECT · <span class="dim">0 × 0</span></span>
+  </div>
+  <div id="agentCursor6" class="swarm-cursor theme-white">
+    <svg class="cursor-svg" viewBox="0 0 24 24" width="22" height="22">
+      <path d="M4 2l16 11-8 2-3 8L4 2z" fill="#ffffff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    <div class="cursor-tooltip">
+      <span class="agent-dot"></span>
+      <span class="agent-name">Inspector</span>
+      <span class="agent-action">Validating...</span>
+    </div>
+    <div class="cursor-ripple"></div>
+  </div>
+</div>
+
+<header class="nav"><a class="brand" href="#"><span>✦</span> FUTUREOS</a><nav><a href="#dashboard">Dashboard</a><a href="#study">Study</a><a href="#work">My Work</a><a href="#future">Future</a><a href="#progress">Progress</a></nav><div><button class="icon-btn" id="themeBtn">◐</button><button class="mobile-menu" id="menuBtn">☰</button></div></header><div class="mobile-nav" id="mobileNav"><a href="#dashboard">Dashboard</a><a href="#study">Study</a><a href="#work">My Work</a><a href="#future">Future</a><a href="#progress">Progress</a></div><main>
+<section class="hero"><div class="hero-copy"><div class="eyebrow">PERSONAL OPERATING SYSTEM · 02.0</div><h1>Build the future<br><span>you can see.</span></h1><p>A living workspace for your goals, studies, skills, projects and the decisions that shape what comes next.</p><div class="hero-actions"><a class="primary" href="#dashboard">Enter FutureOS <b>→</b></a><button class="secondary" id="heroNova">Talk to Nova ✦</button></div><div class="hero-chips"><span>✦ Goal Engine</span><span>◈ AI Insights</span><span>⌁ Smart Timetable</span><span>◎ Progress Intelligence</span></div></div><div class="hero-orbit"><div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="orbit-ring r3"></div><div class="core"><span>F</span><span>O</span><span>S</span></div><i class="sat s1">✦</i><i class="sat s2">◆</i></div></section>
+<section id="dashboard" class="section"><div class="section-head"><div><div class="eyebrow">01 / COMMAND CENTER</div><h2>Your day, at a glance.</h2></div><button class="secondary" id="editProfile">Edit profile</button></div><div class="dashboard-grid"><article class="card welcome"><div><span class="muted">WELCOME BACK</span><h3 id="name">Future Builder</h3><p id="goalText">Loading your mission...</p><div class="mini-line"><span>Level <b id="level">Beginner</b></span><span><b id="studyHours">2h</b> / day</span></div></div><div class="progress-ring"><strong id="overall">0%</strong><small>growth</small></div></article><article class="card stat"><span>ACTIVE GOALS</span><strong id="goalCount">0</strong><small>Keep moving forward</small></article><article class="card stat"><span>OPEN TASKS</span><strong id="taskCount">0</strong><small>One action at a time</small></article><article class="card stat"><span>FOCUS MINUTES</span><strong id="focusTotal">0</strong><small>Time invested</small></article></div><div class="quick-grid"><a class="card quick-card" href="#study"><b>⌁</b><div><strong>Study Command</strong><small>Timetable, reminders & skills</small></div><span>→</span></a><a class="card quick-card" href="#work"><b>◈</b><div><strong>My Work</strong><small>AI-style project analysis</small></div><span>→</span></a><a class="card quick-card" href="#future"><b>◇</b><div><strong>Future Guide</strong><small>Roadmap & next steps</small></div><span>→</span></a><a class="card quick-card" href="#progress"><b>◎</b><div><strong>Progress Report</strong><small>See your growth signals</small></div><span>→</span></a></div></section>
+<section id="goals" class="section"><div class="section-head"><div><div class="eyebrow">02 / GOAL ENGINE</div><h2>Turn ambition into direction.</h2></div><button class="primary small" id="addGoal">+ Add goal</button></div><div id="goalsList" class="goal-list"></div></section>
+<section id="tasks" class="section alt"><div class="section-head"><div><div class="eyebrow">03 / TASKS & NEXT ACTION</div><h2>Know what to do next.</h2></div><button class="primary small" id="addTask">+ Add task</button></div><div class="task-layout"><div class="card next-card"><div class="muted">RECOMMENDED NEXT</div><div id="nextTask" class="next-task">Analyzing…</div><p id="nextReason">Nova will prioritize your next useful action.</p></div><div id="tasksList" class="task-list"></div></div></section>
+<section id="study" class="section"><div class="section-head"><div><div class="eyebrow">04 / STUDY COMMAND</div><h2>Make learning automatic.</h2></div></div><div class="study-grid"><div><div class="subhead"><h3>Study skills</h3><span>Build the stack behind your goal.</span></div><div id="skillsList" class="skill-grid"></div></div><div><div class="subhead"><h3>Reminders</h3><button class="secondary small" id="addReminder">+ Reminder</button></div><div id="remindersList" class="reminder-list"></div></div></div><div class="subhead timetable-head"><div><h3>Smart timetable</h3><span>Build a weekly rhythm around your goal.</span></div><button class="primary small" id="addSlot">+ Add slot</button></div><div id="timetable" class="timetable"></div></section>
+<section id="work" class="section alt"><div class="section-head"><div><div class="eyebrow">05 / MY WORK · NOVA ANALYSIS</div><h2>Turn projects into proof.</h2></div></div><div class="work-grid"><form class="card analyzer" id="analysisForm"><label>Project name<input id="projectName" placeholder="e.g. FutureOS"></label><label>Describe your project<textarea id="projectDesc" rows="7" placeholder="What problem does it solve? Who uses it? What does it do?"></textarea></label><label>Technology stack<input id="projectStack" placeholder="HTML, CSS, JavaScript, Node.js..."></label><label>Key features<input id="projectFeatures" placeholder="Dashboard, AI chatbot, timetable, analytics..."></label><button class="primary">Analyze my project ✦</button></form><div class="card analysis-result" id="analysisResult"><div class="muted">NOVA WORKSPACE</div><h3>Project Intelligence</h3><p>Describe your project and Nova will return strengths, gaps and the best next improvement.</p><div class="analysis-empty">◈<br><small>Ready when you are.</small></div></div></div></section>
+<section id="activities" class="section"><div class="section-head"><div><div class="eyebrow">06 / BEYOND THE CLASSROOM</div><h2>Build a life, not just a resume.</h2></div><button class="primary small" id="addActivity">+ Add activity</button></div><div id="activitiesList" class="activity-grid"></div></section>
+<section id="future" class="section alt"><div class="section-head"><div><div class="eyebrow">07 / FUTURE GUIDE</div><h2>Work backwards from the destination.</h2></div></div><div class="future-grid"><div class="card sim-form"><label>Destination<input id="simGoal" value="AI Engineer"></label><label>Current level<select id="simLevel"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label><label>Study hours / day<input id="simHours" type="number" min=".5" step=".5" value="2"></label><button class="primary" id="simulate">Generate path ✦</button></div><div class="card" id="simResult"><div class="muted">YOUR PATH</div><h3>Make the next chapter visible.</h3><p>Generate a planning simulation from your goal, level and available time.</p></div></div><div class="recommend"><div><div class="eyebrow">NOVA'S RECOMMENDATION</div><h3 id="recommendTitle">What should you do next?</h3><p id="recommendText">Finish one high-priority task, then invest 30 focused minutes into your weakest skill.</p></div><button class="secondary" id="recommendBtn">Refresh advice ↻</button></div></section>
+<section id="progress" class="section"><div class="section-head"><div><div class="eyebrow">08 / PROGRESS REPORT</div><h2>See the signal, not the noise.</h2></div></div><div class="report-grid"><div class="card report-score"><span>GROWTH SCORE</span><strong id="growthScore">0</strong><p>Based on goals, skills, tasks and focus.</p></div><div class="card"><div class="muted">SKILL MOMENTUM</div><div id="skillReport"></div></div><div class="card"><div class="muted">WEEKLY SIGNALS</div><div id="signalReport"></div></div></div></section>
+<section id="achievements" class="section alt"><div class="section-head"><div><div class="eyebrow">09 / ACHIEVEMENTS</div><h2>Progress worth remembering.</h2></div></div><div id="achievementsList" class="achievement-grid"></div></section><section id="focus" class="section"><div class="focus-card card"><div class="eyebrow">10 / FOCUS MODE</div><h2>Protect your attention.</h2><div class="timer" id="timer">25:00</div><p>One focused session can change the shape of a day.</p><button class="primary" id="startTimer">Start focus</button><button class="secondary" id="resetTimer">Reset</button></div></section></main>
+<div class="nova" id="nova"><div class="nova-head"><div><b>✦ NOVA</b><span>FutureOS intelligence</span></div><button id="closeNova">×</button></div><div class="chat" id="chat"><div class="bubble bot">Hey. I’m Nova. Tell me what you’re building, learning or trying to figure out.</div></div><div class="quick"><button data-q="What should I do next?">Next step</button><button data-q="Plan my week">Plan my week</button><button data-q="What skill should I learn next?">Skill advice</button><button data-q="Help me with my project">Project help</button></div><form id="chatForm"><input id="chatInput" placeholder="Ask Nova anything..." autocomplete="off"><button>➤</button></form></div><button class="nova-btn" id="novaBtn">✦</button><footer><div class="brand">✦ FUTUREOS</div><p>Build the future you want.</p><small>© 2026 FutureOS · <span>Developed nonchalantly.</span></small></footer><script src="/js/app.js"></script></body></html>

@@ -1,0 +1,188 @@
+{
+  "profile": {
+    "id": 1,
+    "name": "Future Builder",
+    "goal": "Become an AI Engineer",
+    "level": "Beginner",
+    "study_hours": 2
+  },
+  "goals": [],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Practice JavaScript for 30 minutes",
+      "category": "Coding",
+      "due_date": "Today",
+      "priority": "High",
+      "completed": 0
+    },
+    {
+      "id": 2,
+      "title": "Read one technical article",
+      "category": "Learning",
+      "due_date": "Today",
+      "priority": "Medium",
+      "completed": 1
+    },
+    {
+      "id": 3,
+      "title": "Work on a mini project",
+      "category": "Project",
+      "due_date": "Tomorrow",
+      "priority": "High",
+      "completed": 0
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Programming",
+      "category": "Technical",
+      "progress": 35
+    },
+    {
+      "id": 2,
+      "name": "Artificial Intelligence",
+      "category": "Technical",
+      "progress": 15
+    },
+    {
+      "id": 3,
+      "name": "Communication",
+      "category": "Personal",
+      "progress": 55
+    },
+    {
+      "id": 4,
+      "name": "Problem Solving",
+      "category": "Core",
+      "progress": 40
+    },
+    {
+      "id": 5,
+      "name": "Business",
+      "category": "Career",
+      "progress": 20
+    },
+    {
+      "id": 6,
+      "name": "Leadership",
+      "category": "Personal",
+      "progress": 25
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "First Step",
+      "description": "Create your first goal",
+      "unlocked": 0
+    },
+    {
+      "id": 2,
+      "title": "Focused",
+      "description": "Complete a focus session",
+      "unlocked": 0
+    },
+    {
+      "id": 3,
+      "title": "Skill Builder",
+      "description": "Reach 50% in a skill",
+      "unlocked": 0
+    },
+    {
+      "id": 4,
+      "title": "Future Builder",
+      "description": "Set a career goal",
+      "unlocked": 1
+    },
+    {
+      "id": 5,
+      "title": "Planner",
+      "description": "Create your first timetable",
+      "unlocked": 0
+    },
+    {
+      "id": 6,
+      "title": "Consistent",
+      "description": "Complete 5 tasks",
+      "unlocked": 0
+    }
+  ],
+  "focus_sessions": [],
+  "reminders": [
+    {
+      "id": 1,
+      "title": "Morning study session",
+      "time": "07:00",
+      "days": "Mon–Fri",
+      "type": "Study",
+      "enabled": 1
+    },
+    {
+      "id": 2,
+      "title": "Review today's progress",
+      "time": "21:00",
+      "days": "Daily",
+      "type": "Progress",
+      "enabled": 1
+    }
+  ],
+  "timetable": [
+    {
+      "id": 1,
+      "day": "Monday",
+      "time": "18:00",
+      "subject": "Programming",
+      "category": "Study"
+    },
+    {
+      "id": 2,
+      "day": "Tuesday",
+      "time": "18:00",
+      "subject": "Mathematics",
+      "category": "Study"
+    },
+    {
+      "id": 3,
+      "day": "Wednesday",
+      "time": "17:30",
+      "subject": "AI / ML",
+      "category": "Study"
+    },
+    {
+      "id": 4,
+      "day": "Thursday",
+      "time": "18:00",
+      "subject": "Communication",
+      "category": "Study"
+    },
+    {
+      "id": 5,
+      "day": "Friday",
+      "time": "18:00",
+      "subject": "Project Work",
+      "category": "Project"
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "title": "Public speaking",
+      "category": "Communication",
+      "progress": 30
+    },
+    {
+      "id": 2,
+      "title": "Football / fitness",
+      "category": "Sports",
+      "progress": 45
+    },
+    {
+      "id": 3,
+      "title": "Design & creativity",
+      "category": "Creative",
+      "progress": 25
+    }
+  ]
+}
